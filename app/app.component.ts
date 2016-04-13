@@ -4,6 +4,7 @@ import 'rxjs/Rx'; // Load all features
 import { ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig } from 'angular2/router';
 
 import { ProductListComponent } from './products/product.component';
+import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductService } from './products/product.service';
 
@@ -26,6 +27,11 @@ import { ProductService } from './products/product.service';
         path: '/products',
         name: 'Products',
         component: ProductListComponent
+    },
+    {
+        path: '/product/:id',
+        name: 'ProductDetail',
+        component: ProductDetailComponent
     }
 ])
 export /**

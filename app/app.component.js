@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router', './products/product.component', './home/welcome.component', './products/product.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router', './products/product.component', './products/product-detail.component', './home/welcome.component', './products/product.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, router_1, product_component_1, welcome_component_1, product_service_1;
+    var core_1, http_1, router_1, product_component_1, product_detail_component_1, welcome_component_1, product_service_1;
     var AppComponent;
     return {
         setters:[
@@ -26,6 +26,9 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router',
             },
             function (product_component_1_1) {
                 product_component_1 = product_component_1_1;
+            },
+            function (product_detail_component_1_1) {
+                product_detail_component_1 = product_detail_component_1_1;
             },
             function (welcome_component_1_1) {
                 welcome_component_1 = welcome_component_1_1;
@@ -56,6 +59,11 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router',
                             path: '/products',
                             name: 'Products',
                             component: product_component_1.ProductListComponent
+                        },
+                        {
+                            path: '/product/:id',
+                            name: 'ProductDetail',
+                            component: product_detail_component_1.ProductDetailComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [])
